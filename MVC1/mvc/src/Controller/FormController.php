@@ -17,6 +17,7 @@ class FormController extends BaseController
 			'form' => $form,
 		]);
 	}
+
 	public function add(): void
 	{
 		$form = [];
@@ -54,7 +55,7 @@ class FormController extends BaseController
 				$file = new File($uploadedFilePath);
 			}
 
-			$text =   $username . "\n" . $email . "\n" . $message . "\n" . $uploadedFilePath;
+			$text = $username . "\n" . $email . "\n" . $message . "\n" . $uploadedFilePath;
 			$hash = md5($text);
 			$fileName = date('Y-m-d H-i-s') . ' ' . $hash . '.txt';
 			$filePath = dirname(__DIR__) . '/../data/' . $fileName;
@@ -64,11 +65,11 @@ class FormController extends BaseController
 			exit();
 		}
 
-
 	}
+
 	public function success(): void
 	{
-		$this->render('Form/success.php',[]);
+		$this->render('Form/success.php', []);
 	}
 
 }

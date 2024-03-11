@@ -4,7 +4,8 @@ namespace App\DataValidators;
 
 class DataValidators
 {
-	public static function getFileValidationErrorsOnUpload(): string {
+	public static function getFileValidationErrorsOnUpload(): string
+	{
 		if (!empty($_FILES['file']['name']))
 		{
 			$imageFileType = strtolower(pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION));
@@ -12,7 +13,8 @@ class DataValidators
 			{
 				return "Только PNG или JPG разрешены.";
 			}
-			$uploadedFilePath = dirname(__DIR__) . '/../uploads/' . $_FILES['file']['name'];
+			$uploadDirectory = dirname(__DIR__, 2) . '/uploads/';
+			$uploadedFilePath = $uploadDirectory . '/' . $_FILES['file']['name'];
 
 			if (!is_dir(dirname($uploadedFilePath)) || !is_writable(dirname($uploadedFilePath)))
 			{
@@ -27,7 +29,8 @@ class DataValidators
 		return '';
 	}
 
-	public static function getEmailValidationErrors($email): ?string {
+	public static function getEmailValidationErrors($email): ?string
+	{
 		if (!$email)
 		{
 			return "Поля отмеченные * обязательны для заполнения";

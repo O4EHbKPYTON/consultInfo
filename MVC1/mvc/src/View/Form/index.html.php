@@ -16,11 +16,14 @@
 			<i class="fas fa-envelope"></i> </a>
 	</header><?php
 	/** @var  Form $form */
+
 	use App\Model\Form;
-	$form = new Form('','','',null,false);
-	if ($isSend= ($form->isSend())): ?>
+
+	$form = new Form('', '', '', null, false);
+	if ($isSend = ($form->isSend())): ?>
 		<p>Ваше сообщение успешно отправлено!</p>
-	<?php else: ?>
+	<?php
+	else: ?>
 		<form enctype="multipart/form-data" action="/add/" method="post">
 			<div class="container">
 				<div class="row">
@@ -28,18 +31,24 @@
 						<div class="form-group">
 							<label for="username">Имя пользователя <span class="required-field"></span></label>
 							<input type="text" class="form-control" id="username" name="username" required placeholder="Введите имя пользователя" ">
-							<?php if (isset($errors['username'])): ?>
-								<p class="error"><?php echo $errors['username']; ?></p>
-							<?php endif; ?>
+							<?php
+							if (isset($errors['username'])): ?>
+								<p class="error"><?php
+									echo $errors['username']; ?></p>
+							<?php
+							endif; ?>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="email">E-mail <span class="required-field"></span></label>
-							<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Введите E-mail"  required>
-							<?php if (isset($errors['email'])): ?>
-								<p class="error"><?php echo $errors['email']; ?></p>
-							<?php endif; ?>
+							<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Введите E-mail" required>
+							<?php
+							if (isset($errors['email'])): ?>
+								<p class="error"><?php
+									echo $errors['email']; ?></p>
+							<?php
+							endif; ?>
 						</div>
 					</div>
 				</div>
@@ -48,9 +57,12 @@
 						<div class="form-group">
 							<label for="message">Сообщение <span class="required-field"></span></label>
 							<textarea class="form-control" id="message" name="message" required maxlength="1000" placeholder="Введите сообщение"></textarea>
-							<?php if (isset($errors['message'])): ?>
-								<p class="error"><?php echo $errors['message']; ?></p>
-							<?php endif; ?>
+							<?php
+							if (isset($errors['message'])): ?>
+								<p class="error"><?php
+									echo $errors['message']; ?></p>
+							<?php
+							endif; ?>
 						</div>
 					</div>
 				</div>
@@ -59,9 +71,12 @@
 						<div class="form-group">
 							<label for="file">Файл (*.jpg, *.png)</label>
 							<input type="file" class="form-control-file" id="file" name="file" accept="image/png, image/jpeg">
-							<?php if (isset($errors['file'])): ?>
-								<p class="error"><?php echo $errors['file']; ?></p>
-							<?php endif; ?>
+							<?php
+							if (isset($errors['file'])): ?>
+								<p class="error"><?php
+									echo $errors['file']; ?></p>
+							<?php
+							endif; ?>
 						</div>
 					</div>
 				</div>
@@ -72,7 +87,8 @@
 				</div>
 			</div>
 		</form>
-	<?php endif; ?>
+	<?php
+	endif; ?>
 </section>
 </body>
 </html>

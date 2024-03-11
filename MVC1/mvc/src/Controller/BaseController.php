@@ -4,17 +4,18 @@ namespace App\Controller;
 
 abstract class BaseController
 {
-    public function render(string $templateName, array $params): void
+	public function render(string $templateName, array $params): void
 	{
-        $template = __DIR__ . '/../View/' . $templateName;
+		$template = __DIR__ . '/../View/' . $templateName;
 
-        if (!file_exists($template))
-        {
-            http_response_code(404);
-            echo 'Page not found';
-            return;
-        }
+		if (!file_exists($template))
+		{
+			http_response_code(404);
+			echo 'Page not found';
 
-        include_once $template;
-    }
+			return;
+		}
+
+		include_once $template;
+	}
 }
