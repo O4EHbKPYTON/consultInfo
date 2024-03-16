@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <title><?php $APPLICATION->ShowTitle();?></title>
     <?php $APPLICATION->ShowHead();?>
-    <link rel="stylesheet" href="../assets/template_styles.css">
+    <link rel="stylesheet" href="../../assets/template_styles.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <div class="container">
         <div class="header-wrapper">
             <a href="./index.php" class="header__logo">
-                <img width="300" height="92" src="../assets/images/svg/logo-yanicode.svg" alt="yanicode">
+                <img width="300" height="92" src="../../assets/images/svg/logo-yanicode.svg" alt="yanicode">
             </a>
             <div class="header__burger header__burger_close">
                 <span class="burger-line"></span>

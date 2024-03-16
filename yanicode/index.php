@@ -1,150 +1,177 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Главная страница");
-?>
-
-
-<main class="website-workarea">
-
-    <section class="banner banner_before1" style="background-image: url('./assets/images/banner_blog.jpg');">
-        <div class="banner-wrapper">
-            <div class="container">
-                <div class="banner__content">
-                    <p>Более 20-ти лет управляю<br />
-                        творческими проектами в<br />
-                        брендинге.</p>
-                    <p><b class="text_gold">
-                            Моя личная миссия: </b>делать<br />
-                        вас богаче, а ваших<br />
-                        клиентов счастливее!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="stages">
-                <div class="stages__item">
-                    <div class="stages__step">01</div>
-                    <div class="stages__desc-step">АУДИТ</div>
-                </div>
-                <div class="stages__item">
-                    <div class="stages__step">02</div>
-                    <div class="stages__desc-step">СТРАТЕГИЯ</div>
-                </div>
-                <div class="stages__item">
-                    <div class="stages__step">03</div>
-                    <div class="stages__desc-step">КОНЦЕПЦИЯ</div>
-                </div>
-                <div class="stages__item">
-                    <div class="stages__step">04</div>
-                    <div class="stages__desc-step">ДИЗАЙН</div>
-                </div>
-                <div class="stages__item">
-                    <div class="stages__step">05</div>
-                    <div class="stages__desc-step">КОММУНИКАЦИИ</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="container">
-        <div class="blog-list">
-            <?php $APPLICATION->IncludeComponent(
+?><main class="website-workarea"> <section class="banner banner_before1" style="background-image: url('local/templates/yanicode/assets/images/banner_blog.jpg');">
+<div class="banner-wrapper">
+	<div class="container">
+		<div class="banner__content">
+			<p>
+				 Более 20-ти лет управляю<br>
+				 творческими проектами в<br>
+				 брендинге.
+			</p>
+			<p>
+ <b class="text_gold">
+				Моя личная миссия: </b>делать<br>
+				 вас богаче, а ваших<br>
+				 клиентов счастливее!
+			</p>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="stages">
+		<div class="stages__item">
+			<div class="stages__step">
+				 01
+			</div>
+			<div class="stages__desc-step">
+				 АУДИТ
+			</div>
+		</div>
+		<div class="stages__item">
+			<div class="stages__step">
+				 02
+			</div>
+			<div class="stages__desc-step">
+				 СТРАТЕГИЯ
+			</div>
+		</div>
+		<div class="stages__item">
+			<div class="stages__step">
+				 03
+			</div>
+			<div class="stages__desc-step">
+				 КОНЦЕПЦИЯ
+			</div>
+		</div>
+		<div class="stages__item">
+			<div class="stages__step">
+				 04
+			</div>
+			<div class="stages__desc-step">
+				 ДИЗАЙН
+			</div>
+		</div>
+		<div class="stages__item">
+			<div class="stages__step">
+				 05
+			</div>
+			<div class="stages__desc-step">
+				 КОММУНИКАЦИИ
+			</div>
+		</div>
+	</div>
+</div>
+ </section> <section class="container">
+<div class="blog-list">
+	 <?php $APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"default/template.php",
-	array(
-		"IBLOCK_TYPE" => "news",
-		"IBLOCK_ID" => "1",
-		"NEWS_COUNT" => "10",
-		"SORT_BY1" => "ACTIVE_FROM",
-		"SORT_ORDER1" => "DESC",
-		"DETAIL_URL" => "/blog-details.php?ELEMENT_ID=#ELEMENT_ID#",
-		"CACHE_TYPE" => "A",
-		"SET_TITLE" => "Y",
-		"PROPERTY_CODE" => array(
-			0 => "DATE",
-			1 => "ARTICLE",
-		),
-		"CACHE_TIME" => "3600",
-		"COMPONENT_TEMPLATE" => "template.php",
-		"USE_SEARCH" => "N",
-		"USE_RSS" => "N",
-		"USE_RATING" => "N",
-		"USE_CATEGORIES" => "N",
-		"USE_REVIEW" => "N",
-		"USE_FILTER" => "N",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER2" => "ASC",
-		"CHECK_DATES" => "Y",
-		"SEF_MODE" => "N",
+	Array(
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
+		"BROWSER_TITLE" => "-",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
-		"SET_LAST_MODIFIED" => "N",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
-		"ADD_ELEMENT_CHAIN" => "N",
-		"USE_PERMISSIONS" => "N",
-		"STRICT_SECTION_CHECK" => "N",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"LIST_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"LIST_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"DISPLAY_NAME" => "Y",
-		"META_KEYWORDS" => "-",
-		"META_DESCRIPTION" => "-",
-		"BROWSER_TITLE" => "-",
-		"DETAIL_SET_CANONICAL_URL" => "N",
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => "template.php",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"DETAIL_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"DETAIL_DISPLAY_TOP_PAGER" => "N",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
-		"DETAIL_PAGER_TITLE" => "Страница",
-		"DETAIL_PAGER_TEMPLATE" => "",
+		"DETAIL_DISPLAY_TOP_PAGER" => "N",
+		"DETAIL_FIELD_CODE" => array(0=>"",1=>"",),
 		"DETAIL_PAGER_SHOW_ALL" => "Y",
-		"PAGER_TEMPLATE" => ".default",
-		"DISPLAY_TOP_PAGER" => "N",
+		"DETAIL_PAGER_TEMPLATE" => "",
+		"DETAIL_PAGER_TITLE" => "Страница",
+		"DETAIL_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"DETAIL_SET_CANONICAL_URL" => "N",
+		"DETAIL_URL" => "/blog-details.php?ELEMENT_ID=#ELEMENT_ID#",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"PAGER_TITLE" => "Новости",
-		"PAGER_SHOW_ALWAYS" => "N",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "1",
+		"IBLOCK_TYPE" => "news",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"LIST_FIELD_CODE" => array(0=>"",1=>"",),
+		"LIST_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"MESSAGE_404" => "",
+		"META_DESCRIPTION" => "-",
+		"META_KEYWORDS" => "-",
+		"NEWS_COUNT" => "10",
+		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
-		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(0=>"DATE",1=>"ARTICLE",),
+		"SEF_MODE" => "N",
+		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "Y",
 		"SHOW_404" => "N",
-		"MESSAGE_404" => "",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"USE_CATEGORIES" => "N",
+		"USE_FILTER" => "N",
+		"USE_PERMISSIONS" => "N",
+		"USE_RATING" => "N",
+		"USE_REVIEW" => "N",
+		"USE_RSS" => "N",
+		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"VARIABLE_ALIASES" => array(
-			"SECTION_ID" => "SECTION_ID",
-			"ELEMENT_ID" => "ELEMENT_ID",
-		)
-	),
-	false
-); ?>
-
-        </div>
-    </section>
-</main>
-
-<?php require ($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+		"VARIABLE_ALIASES" => array("SECTION_ID"=>"SECTION_ID","ELEMENT_ID"=>"ELEMENT_ID",)
+	)
+);?><?php $APPLICATION->IncludeComponent(
+	"bitrix:form",
+	".default/template.php",
+	Array(
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"CHAIN_ITEM_LINK" => "",
+		"CHAIN_ITEM_TEXT" => "",
+		"EDIT_ADDITIONAL" => "N",
+		"EDIT_STATUS" => "Y",
+		"IGNORE_CUSTOM_TEMPLATE" => "N",
+		"NAME_TEMPLATE" => "",
+		"NOT_SHOW_FILTER" => "",
+		"NOT_SHOW_TABLE" => "",
+		"RESULT_ID" => $_REQUEST["RESULT_ID"],
+		"SEF_MODE" => "N",
+		"SHOW_ADDITIONAL" => "N",
+		"SHOW_ANSWER_VALUE" => "N",
+		"SHOW_EDIT_PAGE" => "Y",
+		"SHOW_LIST_PAGE" => "Y",
+		"SHOW_STATUS" => "Y",
+		"SHOW_VIEW_PAGE" => "Y",
+		"START_PAGE" => "new",
+		"SUCCESS_URL" => "",
+		"USE_EXTENDED_ERRORS" => "N",
+		"VARIABLE_ALIASES" => Array("action"=>"action"),
+		"WEB_FORM_ID" => $_REQUEST["WEB_FORM_ID"]
+	)
+);?>
+</div>
+ </section> </main><?php require ($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

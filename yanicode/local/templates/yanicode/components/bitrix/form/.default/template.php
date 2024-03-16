@@ -1,9 +1,3 @@
-<?php use Bitrix\Main\Page\Asset;
-Asset::getInstance()->addCss("/bitrix/css/main/bootstrap.min.css");
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/myscripts.js");
-Asset::getInstance()->addString("<link rel='shortcut icon' href='/local/images/favicon.ico' />");
-?>
-
 
 <template id="popup-feedback">
     <form action="" class="js-validated-form">

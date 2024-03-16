@@ -2,7 +2,7 @@
 /**
  * @var CMain $APPLICATION
  */?>
-<?$APPLICATION->IncludeComponent(
+<?php $APPLICATION->IncludeComponent(
     "bitrix:menu",
     "botmenu",
     Array(
@@ -12,4 +12,6 @@
         "USE_EXT" => "Y"
     )
 );?>
-
+<script src="./assets/js/vendor/inputmask.min.js"></script>
+<script src="./assets/js/vendor/swiper-bundle.min.js"></script>
+<script src="./assets/js/build.js"></script>
