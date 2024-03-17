@@ -1,3 +1,4 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <a href="../../../../../../../blog-details.php" class="blog">
     <div class="blog__img">
         <img width="100%" height="100%" src="../../assets/images/test_blog-img1.jpg" alt="">

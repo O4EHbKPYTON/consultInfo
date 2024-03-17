@@ -1,13 +1,9 @@
-<?php
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Детальная страница блога");
-?>
-
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
 <main class="website-workarea">
     <section class="">
         <div class="container blog_article">
-            <img width="100%" height="100%" src="./assets/images/case-img4.jpg" alt="">
+            <img width="100%" height="100%" src="./../../assets/images/case-img4.jpg" alt="">
 
             <h1>
                 РЕСТОРАН ГРИЛЬ-БАР “БАЗИЛИК”
@@ -50,5 +46,3 @@ $APPLICATION->SetTitle("Детальная страница блога");
         </div>
     </section>
 </main>
-
-<?php require ($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
